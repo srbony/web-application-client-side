@@ -2,11 +2,22 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 import { HiHeart, HiThumbUp, HiChat } from "react-icons/hi";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import likeIcone from '../../assets/like.png';
+// import diLike from '../../assets/dislike.png';
+import likeIcone from '../assets/like.png';
+import disLike from '../assets/dislike.png'
 
 const Details = () => {
     const data = useLoaderData();
     console.log(data);
+    const [like, setLike] = useState('');
+    const [count, setCount] = useState(0);
+    const handleLike = () => {
+        if (like) {
+            setCount(count+1)
+        }
+    }
     return (
         <div>
             <div className="card w-96 mx-auto my-4 bg-base-100 shadow-xl">
@@ -18,7 +29,8 @@ const Details = () => {
                         <div className="flex items-center">
                             <div className='flex items-center mr-4 cursor-pointer text-sm'>
                                 <span>Like</span>
-                                <HiThumbUp className='text-blue-500 text-xl'></HiThumbUp>
+                                <HiThumbUp onClick={() => handleLike(like)} className='text-blue-500 text-xl'></HiThumbUp>
+                                {/* <img src={like} onClick={handleLike} alt="" /> */}
 
                             </div>
                             <div className='flex items-center mr-4 cursor-pointer text-sm'>

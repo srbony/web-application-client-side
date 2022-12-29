@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItems = <>
-        <li className='mr-10 text-sky-500 font-semibold'>Media</li>
-        <li className='mr-10 text-sky-500 font-semibold'>Message</li>
-        <li className='mr-10 text-sky-500 font-semibold'>About</li>
+        <Link to='/media'><li className='mr-10 text-sky-500 font-semibold'>Media</li></Link>
+        <Link to='/message'><li className='mr-10 text-sky-500 font-semibold'>Message</li></Link>
+        <Link to='/about'> <li className='mr-10 text-sky-500 font-semibold'>About</li></Link>
+
+
+
     </>
     return (
         <div className="navbar bg-base-100 shadow-2xl rounded-md">

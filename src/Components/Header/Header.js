@@ -3,8 +3,11 @@ import image from '../../assets/images.jpg';
 import { HiFilm, HiLocationMarker, HiEmojiHappy } from "react-icons/hi";
 import { HiTag } from "react-icons/hi2";
 
+import { useState } from 'react';
+
 
 const Header = () => {
+    
     return (
         <div className='mx-auto w-1/2 mt-20 h-52 rounded-md shadow-lg header-wrapper'>
             <div className='header-top flex items-center'>

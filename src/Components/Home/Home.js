@@ -1,5 +1,6 @@
 import React from 'react';
 import PostForm from '../../Pages/PostForm';
+import AllPost from '../AllPost';
 import Header from '../Header/Header';
 
 
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <PostForm></PostForm>
+            <AllPost></AllPost>
         </div>
     );
 };
