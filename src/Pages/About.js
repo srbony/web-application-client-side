@@ -25,7 +25,7 @@ const About = () => {
             university: university,
             address: address
         }
-        fetch('http://localhost:5000/about', {
+        fetch('https://web-application-server.vercel.app/about', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

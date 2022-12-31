@@ -26,7 +26,7 @@ const PostForm = () => {
                         message: message,
                         image: imageData.data.display_url
                     }
-                    fetch('http://localhost:5000/post', {
+                    fetch('https://web-application-server.vercel.app/post', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

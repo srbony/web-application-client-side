@@ -6,7 +6,7 @@ import Post from '../Pages/Post';
 const AllPost = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allPosts')
+        fetch('https://web-application-server.vercel.app/allPosts')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

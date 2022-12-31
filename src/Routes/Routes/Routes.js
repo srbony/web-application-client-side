@@ -4,12 +4,14 @@ import Main from "../../Layouts/Main";
 import About from "../../Pages/About";
 import Details from "../../Pages/Details";
 import Edit from "../../Pages/Edit";
+import Errorpage from "../../Pages/Erropage";
 import Media from "../../Pages/Media";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <Errorpage></Errorpage>,
         children: [
             {
                 path: '/',
@@ -23,21 +25,21 @@ export const router = createBrowserRouter([
                 path: '/details/:id',
                 element: <Details></Details>,
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/allPosts/${params.id}`)
+                    return fetch(`https://web-application-server.vercel.app/allPosts/${params.id}`)
                 }
             },
             {
                 path: '/about',
                 element: <About></About>,
                 // loader: async ({ params }) => {
-                //     return fetch(`http://localhost:5000/about/${params.id}`)
+                //     return fetch(`https://web-application-server.vercel.app/about/${params.id}`)
                 // }
             },
             {
                 path: '/edit',
                 element: <Edit></Edit>,
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/about/${params.id}`)
+                    return fetch(`https://web-application-server.vercel.app/about/${params.id}`)
                 }
 
             }
