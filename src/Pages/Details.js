@@ -15,7 +15,7 @@ const Details = () => {
     const [count, setCount] = useState(0);
     const handleLike = () => {
         if (like) {
-            setCount(count+1)
+            setCount(count + 1)
         }
     }
     return (
